@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/choices.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU"></script>
+    <script src="swiper/swiper-bundle.min.js"></script>
+    <script src="choices.min.js"></script>
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="index.js"></script>
+    <title>BLANCHARD</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="header-common-navigation container">
+                <a href="" class="header-logo"><img src="img/blanchard_logo.svg" alt=""></a>
+                <nav>
+                    <ul class="common-nav-list">
+                        <li class="common-nav-item"><a class="common-nav-link" href="">О нас</a></li>
+                        <li class="common-nav-item"><a class="common-nav-link" href="">Галерея</a></li>
+                        <li class="common-nav-item"><a class="common-nav-link" href="">Каталог</a></li>
+                        <li class="common-nav-item"><a class="common-nav-link" href="">События</a></li>
+                        <li class="common-nav-item"><a class="common-nav-link" href="">Издания</a></li>
+                        <li class="common-nav-item"><a class="common-nav-link" href="">Проекты</a></li>
+                        <li class="common-nav-item"><a class="common-nav-link" href="">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-login-container" tabindex="0">
+                    <svg class="login-svg" width="13" height="13" viewbox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
+                            fill="white" />
+                    </svg>
+                    <button class="nav-login-button">Войти</button>
+                </div>
+        </div>
+        </div>
+        <div class="header-bottom">
+            <nav class="header-art-navigation container">
+                <ul class="nav-art-list">
+                    <li class="nav-art-item"><a class="nav-art-link" tabindex="0">Реализм</a>
+                        <div class="scroll-container" data-simplebar data-simplebar-auto-hide="false">
+                            <ul class="scroll-text">
+                                <li><a href="">Тинторетто</a></li>
+                                <li><a href="">Фридрих</a></li>
+                                <li><a href="">Леонардо</a></li>
+                                <li><a href="">Верроккьо</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-art-item"><a class="nav-art-link" tabindex="0">Импрессионизм</a>
+                        <div class="scroll-container" data-simplebar data-simplebar-auto-hide="false">
+                            <ul class="scroll-text">
+                                <li><a href="">Тинторетто</a></li>
+                                <li><a href="">Фридрих</a></li>
+                                <li><a href="">Леонардо</a></li>
+                                <li><a href="">Верроккьо</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-art-item"><a class="nav-art-link" tabindex="0">Постимпрессионизм</a>
+                        <div class="scroll-container" data-simplebar data-simplebar-auto-hide="false">
+                            <ul class="scroll-text">
+                                <li><a href="">Тинторетто</a></li>
+                                <li><a href="">Фридрих</a></li>
+                                <li><a href="">Леонардо</a></li>
+                                <li><a href="">Верроккьо</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-art-item"><a class="nav-art-link" tabindex="0">Авангард</a>
+                        <div class="scroll-container" data-simplebar data-simplebar-auto-hide="false">
+                            <ul class="scroll-text">
+                                <li><a href="">Тинторетто</a></li>
+                                <li><a href="">Фридрих</a></li>
+                                <li><a href="">Леонардо</a></li>
+                                <li><a href="">Верроккьо</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-art-item"><a class="nav-art-link" tabindex="0">Футуризм</a>
+                        <div class="scroll-container" data-simplebar data-simplebar-auto-hide="false">
+                            <ul class="scroll-text">
+                                <li><a href="">Тинторетто</a></li>
+                                <li><a href="">Фридрих</a></li>
+                                <li><a href="">Леонардо</a></li>
+                                <li><a href="">Верроккьо</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <form action="http://google.com/search" target="_blank" tabindex="0" class="nav-search-bar">
+                    <button type="submit" class="nav-search-btn"></button>
+                    <input type="hidden" name="searchid" value="808327">
+                    <input class="nav-search-field" type="search" name="text" placeholder="Поиск по сайту">
+                </form>
+            </nav>
+        </div>
+
+    </header>
+    <main>
+        <section class="hero-section">
+            <!-- Slider main container -->
+            <div class="swiper-container hero-swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide  swiper-slide-photo-1"></div>
+                    <div class="swiper-slide  swiper-slide-photo-2"></div>
+                    <div class="swiper-slide  swiper-slide-photo-3"></div>
+                </div>
+                
+            </div>
+            <div class="hero-block container">
+                <h1 class="hero-block__head">Прикоснитесь к прекрасному</h1>
+                <p class="hero-block__text">Мы вынуждены отталкиваться от того, что реализация намеченных плановых
+                    заданий создаёт
+                    предпосылки
+                    для новых предложений.</p>
+                <button class="hero-block-btn">Подписаться на рассылку</button>
+            </div>
+        </section>
+        <section class="about-us container">
+            <h2>О нас</h2>
+            <p class="about-us__text">Ясность нашей позиции очевидна: семантический разбор внешних противодействий
+                однозначно определяет
+                каждого участника как способного принимать собственные решения касаемо распределения внутренних
+                резервов
+                и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за
+                собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что
+                высокое
+                качество позиционных исследований создаёт необходимость включения в производственный план целого
+                ряда
+                внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках
+                спецификации современных стандартов, действия представителей оппозиции набирают популярность среди
+                определенных слоев населения, а значит, должны быть разоблачены.</p>
+        </section>
+        <section class="galery-section">
+            <div class="galery container">
+                <div class="galery-content">
+                    <div class="galery-select">
+                        <h2 class="galery__head">Галерея</h2>
+                    <span class="galery__filter">Фильтровать по:</span>
+                    <div class="select-container">
+                        <select name="select" id="selectCustom" class="selectCustom">
+                            <option value="">Автор</option>
+                            <option value="Направление">Направление</option>
+                            <option value="Техника">Техника</option>
+                        </select>
+                    </div>
+                    </div>
+                    <p class="galery-content__text">
+                        Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний
+                        <a href="#" class="galery-login">авторизуйтесь,</a>
+                        либо воспользуйтесь лицензией.
+                    </p>
+                </div>
+                <div class="galery-swiper-container swiper-container">
+                    <!-- Additional required wrapper -->
+                   <div class="swiper-btns">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                   </div>
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="galery-swiper-slide swiper-slide">
+                            <img class="swiper-slide-img" src="img/second-1.1.jpg" alt="">
+                        </div>
+                        <div class="galery-swiper-slide swiper-slide">
+                            <img class="swiper-slide-img" src="img/second-1.2.jpg" alt="">
+                        </div>
+                        <div class="galery-swiper-slide swiper-slide">
+                            <img class="swiper-slide-img" src="img/second-1.3.jpg" alt="">
+                            <img class="swiper-slide-img" src="img/second-1.4.jpg" alt="">
+                        </div>
+                        <div class="galery-swiper-slide swiper-slide">
+                            <img class="swiper-slide-img" src="img/second-1.5.jpg" alt="">
+                            <img class="swiper-slide-img" src="img/second-1.6.jpg" alt="">
+                        </div>
+                        <div class="galery-swiper-slide swiper-slide">
+                            <img class="swiper-slide-img" src="img/second-1.7.jpg" alt="">
+                            <img class="swiper-slide-img" src="img/second-1.8.jpg" alt="">
+                        </div>
+                        <div class="galery-swiper-slide swiper-slide">
+                            <img class="swiper-slide-img" src="img/second-1.9.jpg" alt="">
+                            <img class="swiper-slide-img" src="img/second-1.10.jpg" alt="">
+                        </div>
+                        <div class="galery-swiper-slide swiper-slide">
+                            <img class="swiper-slide-img" src="img/second-1.11.jpg" alt="">
+                            <img class="swiper-slide-img" src="img/second-1.12.jpg" alt="">
+                        </div>
+                        <div class="galery-swiper-slide swiper-slide">
+                            <img class="swiper-slide-img" src="img/second-1.jpg" alt="">
+                            <img class="swiper-slide-img" src="img/second-2.jpg" alt="">
+                        </div>
+                        <div class="galery-swiper-slide swiper-slide">
+                            <img class="swiper-slide-img" src="img/second-3.jpg" alt="">
+                            <img class="swiper-slide-img" src="img/second-4.jpg" alt="">
+                        </div>
+                        <div class="galery-swiper-slide swiper-slide">
+                            <img class="swiper-slide-img" src="img/second-5.jpg" alt="">
+                            <img class="swiper-slide-img" src="img/second-6.jpg" alt="">
+                        </div>
+                        <div class="galery-swiper-slide swiper-slide">
+                            <img class="swiper-slide-img" src="img/second-7.jpg" alt="">
+                            <img class="swiper-slide-img" src="img/second-8.jpg" alt="">
+                        </div>
+                        <div class="galery-swiper-slide swiper-slide">
+                            <img class="swiper-slide-img" src="img/second-9.jpg" alt="">
+                            <img class="swiper-slide-img" src="img/second-10.jpg" alt="">
+                        </div>
+                        <div class="galery-swiper-slide swiper-slide">
+                            <img class="swiper-slide-img" src="img/second-11.jpg" alt="">
+                            <img class="swiper-slide-img" src="img/second-12.jpg" alt="">
+                        </div>
+                        <div class="galery-swiper-slide swiper-slide">
+                            <img class="swiper-slide-img" src="img/second-13.jpg" alt="">
+                            <img class="swiper-slide-img" src="img/second-14.jpg" alt="">
+                        </div>
+                        <div class="galery-swiper-slide swiper-slide">
+                            <img class="swiper-slide-img" src="img/second-15.jpg" alt="">
+                            <img class="swiper-slide-img" src="img/second-16.jpg" alt="">
+                        </div>
+                        <div class="galery-swiper-slide swiper-slide">
+                            <img class="swiper-slide-img" src="img/second-17.jpg" alt="">
+                            <img class="swiper-slide-img" src="img/second-18.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="container">
+            <div>
+                <h2>Каталог</h2>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <p>
+                Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского
+                типа
+                политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь
+                всего
+                лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей
+                день
+                остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.
+            </p>
+            <div>
+                <img src="img/portrait.jpg" alt="">
+                <h3>Доменико Гирландайо</h3>
+                <span>2 июня 1448 - 11 января 1494</span>
+                <p>2 июня 1448 — 11 января 1494. Один из ведущих флорентийских художников Кватроченто, основатель
+                    художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной
+                    мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор
+                    фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь
+                    библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
+                </p>
+            </div>
+            <div class="accordion">
+                <ul>
+                    <li>С 1400-1499 гг.</li>
+                    <li>С 1500-1599 гг.</li>
+                    <li>С 1600-1699 гг.</li>
+                    <li>С 1700-1799 гг.</li>
+                    <li>С 1800-1899 гг.</li>
+                    <li>С 1900-1999 гг.</li>
+                    <li>С 2000 г.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="container">
+            <h2>События</h2>
+            <div>
+                <article>
+                    <img src="img/events-1.jpg" alt="">
+                    <figcaption>Музей им. Щусева
+                        с 20 марта по 30 апреля</figcaption>
+                    <h3>Книжная гравюра в живом восприятии</h3>
+                    <p>
+                        Один из ведущих флорентийских художников Кватроченто, основатель художественной династии,
+                        которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный
+                        Микеланджело.
+                    </p>
+                    <button>Подробнее</button>
+                </article>
+                <article>
+                    <img src="img/events-2.jpg" alt="">
+                    <figcaption>ММОМА
+                        24 марта 19:00</figcaption>
+                    <h3>«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
+                    <p>
+                        Высокий уровень вовлечения представителей целевой аудитории является четким доказательством
+                        простого факта: постоянный количественный рост и сфера нашей активности представляет собой
+                        интересный эксперимент проверки новых принципов формирования...
+                    </p>
+                    <button>Подробнее</button>
+                </article>
+                <article>
+                    <img src="img/events-3.jpg" alt="">
+                    <figcaption>Еврейский музей
+                        с 31 марта по 21 апреля</figcaption>
+                    <h3>Выставка «Формация 2020»</h3>
+                    <p>
+                        Идейные соображения высшего порядка, а также современная методология разработки играет
+                        важную
+                        роль в формировании глубокомысленных рассуждений. Также как перспективное планирование
+                        играет
+                        определяющее значение для новых принципов формирования материально-технической и кадровой
+                        базы.
+                    </p>
+                    <button>Подробнее</button>
+                </article>
+                <article>
+                    <img src="img/events-4.jpg" alt="">
+                    <figcaption>Третьяковка на Крымском валу
+                        с 30 марта по 30 апреля</figcaption>
+                    <h3>XXIV Международная биеннале молодого искусства</h3>
+                    <p>
+                        Внезапно, реплицированные с зарубежных источников, современные исследования представляют
+                        собой
+                        не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть рассмотрены
+                        исключительно в разрезе маркетинговых и финансовых...
+                    </p>
+                    <button>Подробнее</button>
+                </article>
+                <article>
+                    <img src="img/events-5.jpg" alt="">
+                    <figcaption>ММАМ
+                        с 8 апреля по 20 мая</figcaption>
+                    <h3>Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
+                    <p>
+                        Один из ведущих флорентийских художников Кватроченто, основатель художественной династии,
+                        которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный
+                        Микеланджело.
+                    </p>
+                    <button>Подробнее</button>
+                </article>
+                <button>Все события</button>
+            </div>
+        </section>
+        <section class="container">
+            <h2>Издания</h2>
+            <div>
+                <div>
+                    <h3>Категории</h3>
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox" checked aria-checked="true">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                </div>
+                <div>
+                    <article>
+                        <img src="img/book1.jpg" alt="">
+                        <h3>Искусство цвета</h3>
+                        <span>620 руб</span>
+                        <span>Иттен, Йоханнес</span>
+                        <button>Заказать</button>
+                    </article>
+                    <article>
+                        <img src="img/book2.jpg" alt="">
+                        <h3>Искусство цвета</h3>
+                        <span>620 руб</span>
+                        <span>Иттен, Йоханнес</span>
+                        <button>Заказать</button>
+                    </article>
+                    <article>
+                        <img src="img/book3.jpg" alt="">
+                        <h3>Искусство цвета</h3>
+                        <span>620 руб</span>
+                        <span>Иттен, Йоханнес</span>
+                        <button>Заказать</button>
+                    </article>
+                    <article>
+                        <img src="img/book4.jpg" alt="">
+                        <h3>Искусство цвета</h3>
+                        <span>620 руб</span>
+                        <span>Иттен, Йоханнес</span>
+                        <button>Заказать</button>
+                    </article>
+                    <article>
+                        <img src="img/book5.jpg" alt="">
+                        <h3>Искусство цвета</h3>
+                        <span>620 руб</span>
+                        <span>Иттен, Йоханнес</span>
+                        <button>Заказать</button>
+                    </article>
+                    <article>
+                        <img src="img/book6.jpg" alt="">
+                        <h3>Искусство цвета</h3>
+                        <span>620 руб</span>
+                        <span>Иттен, Йоханнес</span>
+                        <button>Заказать</button>
+                    </article>
+                    <article>
+                        <img src="img/book7.jpg" alt="">
+                        <h3>Искусство цвета</h3>
+                        <span>620 руб</span>
+                        <span>Иттен, Йоханнес</span>
+                        <button>Заказать</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="projects container">
+            <h2>Проекты</h2>
+            <p>
+                Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности
+                однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые
+                государства
+                смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их
+                статус
+                бесполезности. Прежде всего, постоянное информационно-пропагандистское обеспечение нашей
+                деятельности
+                однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет
+                сомнений,
+                что действия представителей оппозиции могут быть рассмотрены исключительно в разрезе маркетинговых и
+                финансовых предпосылок. Банальные, но неопровержимые выводы, а также представители современных
+                социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с
+                не
+                уникальными данными до степени совершенной неузнаваемости. Подробнее:
+                blanchard-art.ru/projects/about
+            </p>
+            <h3>Партнёры проектов</h3>
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </section>
+        <section class="contacts container">
+            <h2>Контакты</h2>
+            <div>
+                <h3>Шоурум № 4</h3>
+                <span>Леонтьевский переулок, дом 5, строение 1</span>
+                <h3>Заказать обратный звонок</h3>
+                <form action="">
+                    <input type="text">
+                    <input type="text">
+                    <button>Заказать</button>
+                </form>
+                <h3>Связаться в один клик</h3>
+                <div class="whatsup"><a href=""></a></div>
+                <div class="telegram"><a href=""></a></div>
+            </div>
+            <div class="map-container">
+                <div id="map" style="width: 100%; height: 100%"></div>
+            </div>
+        </section>
+    </main>
+    <footer class="container">
+        <a href="">
+            <img src="img/blanchard_logo.svg" alt="Логотип компании BLANCHARD">
+        </a>
+        <div class="socials">
+            <div class="vk"><a href="https://vk.com/"></a></div>
+            <div class="instagram"><a href="https://www.instagram.com/"></a></div>
+            <div class="facebook"><a href="https://ru-ru.facebook.com/"></a></div>
+        </div>
+    </footer>
+    <script>
+
+        const element = document.querySelector('.selectCustom');
+        const choices = new Choices(element,{
+            searchEnabled: false,
+            shouldSort: false,
+            forseVisible: true,
+        });
+    
+
+        var mySwiper = new Swiper('.hero-swiper-container', {
+            // Optional parameters
+            loop: true,
+            slidesPerView: 'auto',
+            speed: 500,
+
+            slideActiveClass: ('hero-swiper-slide-active'),
+
+            autoplay: {
+                delay: 3000,
+                waitForTransition: false,
+            },
+        });
+
+
+        var mySwiper = new Swiper('.galery-swiper-container', {
+            // Optional parameters 
+
+            slideClass: ('galery-swiper-slide'),
+            
+            slidesPerView: 3,
+            slidesPercolumn: 2,
+            spaceBetween: 50,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+                },
+           
+            speed: 600,
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+        });
+
+
+
+
+
+        type = "text/javascript" >
+            $(function () {
+                $("a[href^='#']").click(function () {
+                    var _href = $(this).attr("href");
+                    $("html, body").animate({
+                        scrollTop: $(_href).offset().top + "px"
+                    });
+                    return false;
+                });
+            });
+
+</script>
+
+
+<script>
+        // Функция ymaps.ready() будет вызвана, когда
+        // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+        ymaps.ready(init);
+
+        function init() {
+            // Создание карты.
+            var myMap = new ymaps.Map("map", {
+                // Координаты центра карты.
+                // Порядок по умолчанию: «широта, долгота».
+                // Чтобы не определять координаты центра карты вручную,
+                // воспользуйтесь инструментом Определение координат.
+                center: [55.758463, 37.601079],
+                // Уровень масштабирования. Допустимые значения:
+                // от 0 (весь мир) до 19.
+                zoom: 16,
+                controls: [],
+                autoFitToViewport: 'always',
+                suppressMapOpenBlock: false,
+                suppressObsoleteBrowserNotifier: false,
+            });
+
+
+            var myPlacemark = new ymaps.Placemark([55.758463, 37.601079], {}, {
+                iconLayout: 'default#image',
+                iconImageHref: 'img/map-point.svg',
+                iconImageSize: [20, 20],
+                iconImageOffset: [-3, -42]
+            });
+
+            myMap.geoObjects
+                .add(myPlacemark)
+
+        };
+
+
+        
+        
+    </script>
+
+</body>
+
+</html>
