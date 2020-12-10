@@ -265,7 +265,7 @@ textarea,
     outline: 2px solid var(--effect-color);
 }
 
-/*.bottom-navigation__item:hover{
+.bottom-navigation__item:hover{
     color: var(--hover-color);
     transition: color 0.2s ease-in-out;
 }
@@ -273,12 +273,11 @@ textarea,
 
 .bottom-navigation__item:hover .bottom-navigation__arrow{
     stroke: #9D5CD0;
-    transform: rotate(180deg);
 }
 
 
-.bottom-navigation__item:hover .scroll-container{
-    display: block;
+/*.bottom-navigation__item:hover .scroll-container{
+    visibility: visible;
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
 }
