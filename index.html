@@ -11,29 +11,29 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU"></script>
     <script src="swiper/swiper-bundle.min.js"></script>
-    <script src="choices.min.js"></script>
+    <script src="js/choices.min.js"></script>
     <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="focus-visible.js"></script>
-    <script src="index.js"></script>
+    <script src="js/focus-visible.js"></script>
+    <script src="js/index.js"></script>
     <title>BLANCHARD</title>
 </head>
 
 <body>
     <header class="header">
-        <div class="top-navigation">
+        <div class="header__top">
             <div class="top-navigation__container container">
                 <a href="" class="top-navigation__logo"><img src="img/blanchard_logo.svg" alt=""></a>
                 <nav>
-                    <ul class="top-navigation__list">
-                        <li class="top-navigation__item"><a class="top-navigation__link" href="#about-us">О нас</a></li>
-                        <li class="top-navigation__item"><a class="top-navigation__link" href="#galery">Галерея</a></li>
-                        <li class="top-navigation__item"><a class="top-navigation__link" href="#catalog">Каталог</a></li>
-                        <li class="top-navigation__item"><a class="top-navigation__link" href="#events">События</a></li>
-                        <li class="top-navigation__item"><a class="top-navigation__link" href="#publications">Издания</a></li>
-                        <li class="top-navigation__item"><a class="top-navigation__link" href="#projects">Проекты</a></li>
-                        <li class="top-navigation__item"><a class="top-navigation__link" href="#contacts">Контакты</a></li>
+                    <ul class="main-navigation__list">
+                        <li class="main-navigation__item"><a class="main-navigation__link" href="#about-us">О нас</a></li>
+                        <li class="main-navigation__item"><a class="main-navigation__link" href="#galery">Галерея</a></li>
+                        <li class="main-navigation__item"><a class="main-navigation__link" href="#catalog">Каталог</a></li>
+                        <li class="main-navigation__item"><a class="main-navigation__link" href="#events">События</a></li>
+                        <li class="main-navigation__item"><a class="main-navigation__link" href="#publications">Издания</a></li>
+                        <li class="main-navigation__item"><a class="main-navigation__link" href="#projects">Проекты</a></li>
+                        <li class="main-navigation__item"><a class="main-navigation__link" href="#contacts">Контакты</a></li>
                     </ul>
                 </nav>
                 <button class="top-navigation__button" id="log-in">
@@ -47,7 +47,7 @@
                 </button>
             </div>
         </div>
-        <div class="bottom__navigation">
+        <div class="header__bottom">
             <nav class="bottom-navigation container">
                 <ul class="bottom-navigation__list">
                     <li class="bottom-navigation__item"><a class="bottom-navigation__link" tabindex="0">Реализм
@@ -81,7 +81,7 @@
                     <li class="bottom-navigation__item"><a class="bottom-navigation__link" tabindex="0">Постимпрессионизм
                        <svg class="bottom-navigation__arrow" width="12" height="7" viewbox= "0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11 1L6 6L0.999998 1" />
-                            </svg> 
+                            </svg>
                     </a>
                         <div class="scroll-container" data-simplebar data-simplebar-auto-hide="false">
                             <ul class="scroll-container__list">
@@ -112,7 +112,7 @@
                     <li class="bottom-navigation__item"><a class="bottom-navigation__link" tabindex="0">Футуризм
                        <svg class="bottom-navigation__arrow" width="12" height="7" viewbox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11 1L6 6L0.999998 1"/>
-                            </svg> 
+                            </svg>
                     </a>
                         <div class="scroll-container" data-simplebar data-simplebar-auto-hide="false">
                             <ul class="scroll-text">
@@ -126,26 +126,27 @@
                 </ul>
                 <form action="http://google.com/search" target="_blank" tabindex="0" class="bottom-navigation__search">
                     <button type="submit" class="bottom-navigation__button"></button>
-                    <input type="hidden" name="searchid" value="808327">
+                    <input type="hidden" value="808327">
                     <input class="bottom-navigation__search__field" type="search" name="text" placeholder="Поиск по сайту">
                 </form>
             </nav>
         </div>
     </header>
     <main>
+        <h1 class="hiddenh1">Художественная галерея</h1>
         <section class="hero-section">
             <!-- Slider main container -->
             <div class="swiper-container hero-swiper-container">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide  ">
+                    <div class="swiper-slide">
                         <div class="swiper-slide-photo-1"></div>
                     </div>
-                    <div class="swiper-slide  " >
+                    <div class="swiper-slide" >
                         <div class="swiper-slide-photo-2"></div>
                     </div>
-                    <div class="swiper-slide  ">
+                    <div class="swiper-slide">
                         <div class="swiper-slide-photo-3">
 
                         </div>
@@ -153,7 +154,8 @@
                 </div>
             </div>
             <div class="hero-container container">
-                <h1 class="hero-container__head">Прикоснитесь к прекрасному</h1>
+
+                <h3 class="hero-container__head">Прикоснитесь к прекрасному</h3>
                 <p class="hero-container__text">Мы вынуждены отталкиваться от того, что реализация намеченных плановых
                     заданий создаёт
                     предпосылки
@@ -182,16 +184,17 @@
             <div class="galery container" id="galery">
                 <div class="galery-content">
                         <h2 class="galery-content__head section-title">Галерея</h2>
-                        <span class="galery-content__filter">Фильтровать по:</span>
-                        <div class="select-container">
+                       <label class="galery-content__filter">Фильтровать по:
+                        <span class="select-container">
                             <select name="select" id="selectCustom" class="selectCustom">
                                <option value="" >Автор</option>
                                <option value="Автор" selected>Автор</option>
                                <option value="Техника">Направление</option>
                                <option value="Направление">Техника</option>
                             </select>
-                        </div>
-                    
+                          </span>
+                       </label>
+
                     <p class="galery-content__text">
                         Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний
                         <a href="#log-in" class="galery-login">авторизуйтесь,</a>
@@ -333,17 +336,17 @@
                             <div id="accordion" class="dates-accordeon">
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question1">С 1400-1499 гг.</h3>
-                
+
                                 </div>
                                 <div class="faq-answer-container">
                                     <p class="faq-answer">
-                          
+
                                     </p>
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question2">С 1500-1599 гг.
                                     </h3>
-                
+
                                 </div>
                                 <div class="about-painters">
                                     <ul class="tabs">
@@ -372,46 +375,46 @@
                                         <li class="tab">Пизанелло</li>
                                         <li class="tab">Пинтуриккьо</li>
                                     </ul>
-                                    
+
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question3">С 1600-1699 гг.</h3>
                                 </div>
                                 <div class="faq-answer-container">
                                     <p class="faq-answer">
-                                        
+
                                     </p>
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question4">С 1700-1799 гг.</h3>
-                
+
                                 </div>
                                 <div class="faq-answer-container">
                                     <p class="faq-answer">
-                                       
+
                                     </p>
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question5">С 1800-1899 гг.</h3>
-                
+
                                 </div>
                                 <div class="faq-answer-container">
                                     <p class="faq-answer">
-                                        
+
                                     </p>
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question5">С 1900-1999 гг.</h3>
-                
+
                                 </div>
                                 <div class="faq-answer-container">
                                     <p class="faq-answer">
-                                        
+
                                     </p>
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question5">С 2000 г.</h3>
-                
+
                                 </div>
                                 <div class="faq-answer-container">
                                     <p class="faq-answer">
@@ -423,7 +426,7 @@
                     </div>
 <!--
                     <div class="tabs__content" data-tabs-target="">
-                        
+
                         <p class="tabs__content__text">Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.</p>
                         <div class="artist-container">
                             <div class="artist-info">
@@ -440,17 +443,17 @@
                             <div id="accordion" class="dates-accordeon">
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question1">С 1400-1499 гг.</h3>
-                
+
                                 </div>
                                 <div class="faq-answer-container">
                                     <p class="faq-answer">
-                          
+
                                     </p>
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question2">С 1500-1599 гг.
                                     </h3>
-                
+
                                 </div>
                                 <div class="about-painters">
                                     <ul class="tabs">
@@ -479,57 +482,57 @@
                                         <li class="tab">Пизанелло</li>
                                         <li class="tab">Пинтуриккьо</li>
                                     </ul>
-                                    
+
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question3">С 1600-1699 гг.</h3>
                                 </div>
                                 <div class="faq-answer-container">
                                     <p class="faq-answer">
-                                       
+
                                     </p>
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question4">С 1700-1799 гг.</h3>
-                
+
                                 </div>
                                 <div class="faq-answer-container">
                                     <p class="faq-answer">
-                                       
+
                                     </p>
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question5">С 1800-1899 гг.</h3>
-                
+
                                 </div>
                                 <div class="faq-answer-container">
                                     <p class="faq-answer">
-                                       
+
                                     </p>
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question5">С 1900-1999 гг.</h3>
-                
+
                                 </div>
                                 <div class="faq-answer-container">
                                     <p class="faq-answer">
-                                        
+
                                     </p>
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question5">С 2000 г.</h3>
-                
+
                                 </div>
                                 <div class="faq-answer-container">
                                     <p class="faq-answer">
-                                      
+
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="tabs__content tabs__content_active" data-tabs-target="">
-                        
+
                         <p class="tabs__content__text">Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.</p>
                         <div class="artist-container">
                             <div class="artist-info">
@@ -546,17 +549,17 @@
                             <div id="accordion" class="dates-accordeon">
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question1">С 1400-1499 гг.</h3>
-                
+
                                 </div>
                                 <div class="faq-answer-container">
                                     <p class="faq-answer">
-                          
+
                                     </p>
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question2">С 1500-1599 гг.
                                     </h3>
-                
+
                                 </div>
                                 <div class="about-painters">
                                     <ul class="tabs">
@@ -585,51 +588,51 @@
                                         <li class="tab">Пизанелло</li>
                                         <li class="tab">Пинтуриккьо</li>
                                     </ul>
-                                    
+
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question3">С 1600-1699 гг.</h3>
                                 </div>
                                 <div class="faq-answer-container">
                                     <p class="faq-answer">
-                                       
+
                                     </p>
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question4">С 1700-1799 гг.</h3>
-                
+
                                 </div>
                                 <div class="faq-answer-container">
                                     <p class="faq-answer">
-                                        
+
                                     </p>
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question5">С 1800-1899 гг.</h3>
-                
+
                                 </div>
                                 <div class="faq-answer-container">
                                     <p class="faq-answer">
-                                       
+
                                     </p>
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question5">С 1900-1999 гг.</h3>
-                
+
                                 </div>
                                 <div class="faq-answer-container">
                                     <p class="faq-answer">
-                                       
+
                                     </p>
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question5">С 2000 г.</h3>
-                
+
                                 </div>
                                 <div class="faq-answer-container">
                                     <p class="faq-answer">
-                                       
-                                       
+
+
                                     </p>
                                 </div>
                             </div>
@@ -652,17 +655,17 @@
                             <div id="accordion" class="dates-accordeon">
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question1">С 1400-1499 гг.</h3>
-                
+
                                 </div>
                                 <div class="faq-answer-container">
                                     <p class="faq-answer">
-                          
+
                                     </p>
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question2">С 1500-1599 гг.
                                     </h3>
-                
+
                                 </div>
                                 <div class="about-painters">
                                     <ul class="tabs">
@@ -691,50 +694,50 @@
                                         <li class="tab">Пизанелло</li>
                                         <li class="tab">Пинтуриккьо</li>
                                     </ul>
-                                    
+
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question3">С 1600-1699 гг.</h3>
                                 </div>
                                 <div class="faq-answer-container">
                                     <p class="faq-answer">
-                                       
+
                                     </p>
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question4">С 1700-1799 гг.</h3>
-                
+
                                 </div>
                                 <div class="faq-answer-container">
                                     <p class="faq-answer">
-                                       
+
                                     </p>
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question5">С 1800-1899 гг.</h3>
-                
+
                                 </div>
                                 <div class="faq-answer-container">
                                     <p class="faq-answer">
-                                       
+
                                     </p>
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question5">С 1900-1999 гг.</h3>
-                
+
                                 </div>
                                 <div class="faq-answer-container">
                                     <p class="faq-answer">
-                                       
+
                                     </p>
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question5">С 2000 г.</h3>
-                
+
                                 </div>
                                 <div class="faq-answer-container">
                                     <p class="faq-answer">
-                                       
+
                                     </p>
                                 </div>
                             </div>
@@ -756,17 +759,17 @@
                             <div id="accordion" class="dates-accordeon">
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question1">С 1400-1499 гг.</h3>
-                
+
                                 </div>
                                 <div class="faq-answer-container">
                                     <p class="faq-answer">
-                          
+
                                     </p>
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question2">С 1500-1599 гг.
                                     </h3>
-                
+
                                 </div>
                                 <div class="about-painters">
                                     <ul class="tabs">
@@ -795,7 +798,7 @@
                                         <li class="tab">Пизанелло</li>
                                         <li class="tab">Пинтуриккьо</li>
                                     </ul>
-                                    
+
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question3">С 1600-1699 гг.</h3>
@@ -819,7 +822,7 @@
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question4">С 1700-1799 гг.</h3>
-                
+
                                 </div>
                                 <div class="faq-answer-container">
                                     <p class="faq-answer">
@@ -840,7 +843,7 @@
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question5">С 1800-1899 гг.</h3>
-                
+
                                 </div>
                                 <div class="faq-answer-container">
                                     <p class="faq-answer">
@@ -861,7 +864,7 @@
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question5">С 1900-1999 гг.</h3>
-                
+
                                 </div>
                                 <div class="faq-answer-container">
                                     <p class="faq-answer">
@@ -882,7 +885,7 @@
                                 </div>
                                 <div class="ui-accordeon-header">
                                     <h3 class="question question5">С 2000 г.</h3>
-                
+
                                 </div>
                                 <div class="faq-answer-container">
                                     <p class="faq-answer">
@@ -905,7 +908,7 @@
                         </div></div> -->
             </div>
             </div>
-           
+
         </section>
         <!--<section class="container">
             <h2 class="events__head section-title">События</h2>
@@ -1128,14 +1131,14 @@
             slideActiveClass: ('hero-swiper-slide-active'),
             allowTouchMove: true,
             autoplay:{
-                delay: 7000,
+                delay: 10000,
             },
-            
+
         });
 
 
         var mySwiper = new Swiper('.galery-swiper-container', {
-            // Optional parameters 
+            // Optional parameters
             slideClass: ('galery-swiper-slide'),
             slidesPerGroup: 3,
             slidesPerView: 3,
