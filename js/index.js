@@ -1,16 +1,75 @@
 window.addEventListener('DOMContentLoaded', () =>{
-/*Табы*/
+//Табы-страны
 
 const tabs = document.querySelector('.tabs');
+const tabsBtn = document.querySelectorAll('.tabs__btn')
+const tabsContent = document.querySelectorAll('.tabs-content')
 
 if (tabs){
     tabs.addEventListener('click', (e) =>{
         if(e.target.classList.contains('tabs__btn')){
             const tabsPath = e.target.dataset.tabsPath;
-            console.log(tabsPath)
+            console.log(tabsPath);
+          tabsHandler(tabsPath);
         }
     });
 }
+
+const tabsHandler = (path) => {
+  tabsBtn.forEach(el => {el.classList.remove('tabs__btn_active')});
+  document.querySelector(`[data-tabs-path="${path}"]`).classList.add('tabs__btn_active');
+
+  tabsContent.forEach(el => {el.classList.remove('tabs-content_active')});
+  document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tabs-content_active');
+};
+
+// Табы внутри аккордеона
+
+const artTabs = document.querySelector('.artist-tabs');
+const artBtn = document.querySelectorAll('.artist-accordeon__btn')
+const artistInfo = document.querySelectorAll('.artist__info')
+
+if (artTabs){
+  artTabs.addEventListener('click', (e) =>{
+        if(e.target.classList.contains('artist-accordeon__btn')){
+            const artPath = e.target.dataset.artPath;
+            console.log(artPath);
+          artHandler(artPath);
+        }
+    });
+}
+console.log(artBtn);
+const artHandler = (path) => {
+  artBtn.forEach(el => {el.classList.remove('artist-accordeon__btn_active')});
+  document.querySelector(`[data-art-path="${path}"]`).classList.add('artist-accordeon__btn_active');
+
+  artistInfo.forEach(el => {el.classList.remove('artist__info_active')});
+  document.querySelector(`[data-art-target="${path}"]`).classList.add('artist__info_active');
+};
+
+
+
+const artTabsRussia = document.querySelector('.russia-artist-tabs');
+const artBtnRussia = document.querySelectorAll('.russia-artist-accordeon__btn')
+const artistInfoRussia = document.querySelectorAll('.russia-artist__info')
+
+if (artTabsRussia){
+  artTabsRussia.addEventListener('click', (e) =>{
+        if(e.target.classList.contains('russia-artist-accordeon__btn')){
+            const artPath = e.target.dataset.artPath;
+            console.log(artPath);
+          artHandlerRussia(artPath);
+        }
+    });
+}
+console.log(artBtnRussia);
+const artHandlerRussia = (path) => {
+  artBtnRussia.forEach(el => {el.classList.remove('russia-artist-accordeon__btn_active')});
+  document.querySelector(`[data-art-path="${path}"]`).classList.add('russia-artist-accordeon__btn_active');
+
+  artistInfoRussia.forEach(el => {el.classList.remove('russia-artist__info_active')});
+  document.querySelector(`[data-art-target="${path}"]`).classList.add('russia-artist__info_active');
+};
 
 
 /*Dropdown Menu*/
@@ -84,10 +143,5 @@ bottomNavLink.forEach((el, index) => {
 
     }
   }
-
-
-
-
-
 
 });
