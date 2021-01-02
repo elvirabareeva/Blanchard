@@ -9,7 +9,7 @@ if (tabs){
     tabs.addEventListener('click', (e) =>{
         if(e.target.classList.contains('tabs__btn')){
             const tabsPath = e.target.dataset.tabsPath;
-            console.log(tabsPath);
+        
           tabsHandler(tabsPath);
         }
     });
@@ -33,7 +33,7 @@ if (artTabs){
   artTabs.addEventListener('click', (e) =>{
         if(e.target.classList.contains('artist-accordeon__btn')){
             const artPath = e.target.dataset.artPath;
-            console.log(artPath);
+
           artHandler(artPath);
         }
     });
@@ -57,7 +57,7 @@ if (artTabsRussia){
   artTabsRussia.addEventListener('click', (e) =>{
         if(e.target.classList.contains('russia-artist-accordeon__btn')){
             const artPath = e.target.dataset.artPath;
-            console.log(artPath);
+
           artHandlerRussia(artPath);
         }
     });
@@ -69,6 +69,74 @@ const artHandlerRussia = (path) => {
 
   artistInfoRussia.forEach(el => {el.classList.remove('russia-artist__info_active')});
   document.querySelector(`[data-art-target="${path}"]`).classList.add('russia-artist__info_active');
+};
+
+
+const artTabsFrance = document.querySelector('.france-artist-tabs');
+const artBtnFrance = document.querySelectorAll('.france-artist-accordeon__btn')
+const artistInfoFrance = document.querySelectorAll('.france-artist__info')
+
+if (artTabsFrance){
+  artTabsFrance.addEventListener('click', (e) =>{
+        if(e.target.classList.contains('france-artist-accordeon__btn')){
+            const artPath = e.target.dataset.artPath;
+
+          artHandlerFrance(artPath);
+        }
+    });
+}
+console.log(artBtnFrance);
+const artHandlerFrance = (path) => {
+  artBtnFrance.forEach(el => {el.classList.remove('france-artist-accordeon__btn_active')});
+  document.querySelector(`[data-art-path="${path}"]`).classList.add('france-artist-accordeon__btn_active');
+
+  artistInfoFrance.forEach(el => {el.classList.remove('france-artist__info_active')});
+  document.querySelector(`[data-art-target="${path}"]`).classList.add('france-artist__info_active');
+};
+
+
+const artTabsGermany = document.querySelector('.germany-artist-tabs');
+const artBtnGermany = document.querySelectorAll('.germany-artist-accordeon__btn')
+const artistInfoGermany = document.querySelectorAll('.germany-artist__info')
+
+if (artTabsGermany){
+  artTabsGermany.addEventListener('click', (e) =>{
+        if(e.target.classList.contains('germany-artist-accordeon__btn')){
+            const artPath = e.target.dataset.artPath;
+
+          artHandlerGermany(artPath);
+        }
+    });
+}
+
+const artHandlerGermany = (path) => {
+  artBtnGermany.forEach(el => {el.classList.remove('germany-artist-accordeon__btn_active')});
+  document.querySelector(`[data-art-path="${path}"]`).classList.add('germany-artist-accordeon__btn_active');
+
+  artistInfoGermany.forEach(el => {el.classList.remove('germany-artist__info_active')});
+  document.querySelector(`[data-art-target="${path}"]`).classList.add('germany-artist__info_active');
+};
+
+const artTabsBelgium = document.querySelector('.belgium-artist-tabs');
+const artBtnBelgium = document.querySelectorAll('.belgium-artist-accordeon__btn')
+const artistInfoBelgium = document.querySelectorAll('.belgium-artist__info')
+
+if (artTabsBelgium){
+  artTabsBelgium.addEventListener('click', (e) =>{
+        if(e.target.classList.contains('belgium-artist-accordeon__btn')){
+            const artPath = e.target.dataset.artPath;
+
+          artHandlerBelgium(artPath);
+        }
+    });
+}
+
+const artHandlerBelgium = (path) => {
+  artBtnBelgium.forEach(el => {el.classList.remove('belgium-artist-accordeon__btn_active')});
+  document.querySelector(`[data-art-path="${path}"]`).classList.add('belgium-artist-accordeon__btn_active');
+
+  artistInfoBelgium.forEach(el => {el.classList.remove('belgium-artist__info_active')});
+  document.querySelector(`[data-art-target="${path}"]`).classList.add('belgium-artist__info_active');
 };
 
 
@@ -104,9 +172,8 @@ bottomNavLink.forEach((el, index) => {
   });
 
 
-
-
-  window.onclick = function(event) {
+  window.addEventListener('click', (event) => {
+    event.preventDefault();
     if (!event.target.matches('.bottom-navigation__link')) {
       let dropdowns = document.getElementsByClassName('scroll-container');
       let i;
@@ -142,6 +209,7 @@ bottomNavLink.forEach((el, index) => {
       }
 
     }
-  }
+  })
 
 });
+
