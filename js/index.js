@@ -1,4 +1,181 @@
 window.addEventListener('DOMContentLoaded', () =>{
+
+  const element = document.querySelector('.selectCustom');
+    const choices = new Choices(element, {
+      searchEnabled: false,
+      shouldSort: false,
+    });
+
+
+
+     var mySwiper = new Swiper('.hero-swiper-container', {
+      // Optional parameters
+      slidesPerView: 'auto',
+      speed: 800,
+      effect: 'fade',
+      slideActiveClass: ('hero-swiper-slide-active'),
+      allowTouchMove: true,
+      autoplay: {
+        delay: 10000,
+      },
+
+    });
+
+    var mySwiper = new Swiper('.publications-swiper-container', {
+      // Optional parameters
+      slideClass: ('publications-swiper-slide'),
+      slidesPerGroup: 3,
+      slidesPerView: 3,
+      spaceBetween: 50,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      },
+
+      speed: 600,
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+    });
+    var mySwiper = new Swiper('.galery-swiper-container', {
+      // Optional parameters
+      slideClass: ('galery-swiper-slide'),
+      slidesPerGroup: 3,
+      slidesPerView: 3,
+      slidesPerColumn: 2,
+      spaceBetween: 50,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      },
+
+      speed: 600,
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+    });
+
+
+    var mySwiper = new Swiper('.partners-swiper-container', {
+      // Optional parameters
+      slideClass: ('partners-swiper-slide'),
+      slidesPerGroup: 3,
+      slidesPerView: 3,
+      spaceBetween: 50,
+      navigation: {
+        nextEl: '.partners-swiper-button-next',
+        prevEl: '.partners-swiper-button-prev',
+      },
+
+      speed: 600,
+
+    });
+
+
+    $(function () {
+      $(".artist-accordeon").accordion();
+    });
+
+
+    $(function () {
+      $(".artist-accordeon").accordion({
+        active: false
+      });
+    });
+
+
+    $(function () {
+      var icons = {
+        header: "arrow-down",
+        activeHeader: "arrow-up"
+      };
+      $(".artist-accordeon").accordion({
+        icons: icons
+      });
+      $("#toggle").button().on("click", function () {
+        if ($(".artist-accordeon").accordion("option", "icons")) {
+          $(".artist-accordeon").accordion("option", "icons", null);
+        } else {
+          $(".artist-accordeon").accordion("option", "icons", icons);
+        }
+      });
+    });
+
+
+    $(".artist-accordeon").accordion({
+      heightStyle: "content"
+    });
+
+
+    $(".artist-accordeon").accordion("refresh");
+
+
+
+
+    type = "text/javascript" >
+      $(function () {
+        $("a[href^='#']").click(function () {
+          var _href = $(this).attr("href");
+          $("html, body").animate({
+            scrollTop: $(_href).offset().top + "px"
+          });
+          return false;
+        });
+      });
+
+
+
+
+
+    // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
+
+    function init() {
+      // Создание карты.
+      var myMap = new ymaps.Map("map", {
+        // Координаты центра карты.
+        // Порядок по умолчанию: «широта, долгота».
+        // Чтобы не определять координаты центра карты вручную,
+        // воспользуйтесь инструментом Определение координат.
+        center: [55.758463, 37.601079],
+        // Уровень масштабирования. Допустимые значения:
+        // от 0 (весь мир) до 19.
+        zoom: 16,
+        controls: [],
+        autoFitToViewport: 'always',
+        suppressMapOpenBlock: false,
+        suppressObsoleteBrowserNotifier: false,
+      });
+
+
+      var myPlacemark = new ymaps.Placemark([55.758463, 37.601079], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/map-point.svg',
+        iconImageSize: [20, 20],
+        iconImageOffset: [-3, -42]
+      });
+
+      myMap.geoObjects
+        .add(myPlacemark)
+
+    };
 //Табы-страны
 
 const tabs = document.querySelector('.tabs');
@@ -9,7 +186,7 @@ if (tabs){
     tabs.addEventListener('click', (e) =>{
         if(e.target.classList.contains('tabs__btn')){
             const tabsPath = e.target.dataset.tabsPath;
-        
+
           tabsHandler(tabsPath);
         }
     });
@@ -210,6 +387,34 @@ bottomNavLink.forEach((el, index) => {
 
     }
   })
+
+  /* Кнопка Все события*/
+
+
+  const moreBtn = document.querySelector('.more-btn');
+  const eventsMore = document.querySelectorAll('.events-more')
+
+
+if (moreBtn){
+  moreBtn.addEventListener('click', (e) =>{
+    if(moreBtn.style.display === "none"){
+      moreBtn.style.display="inline";
+      eventsMore.style.display="none";
+
+    }else {
+      moreBtn.style.display="none";
+      eventsMore.forEach(el => {el.classList.add('events-more_active')});
+    }
+
+    });
+}
+
+
+
+
+
+
+
 
 });
 
